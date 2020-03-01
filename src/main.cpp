@@ -1,8 +1,9 @@
 #include <GLFW/glfw3.h>
-
+#include "vector2.hpp"
 
 int main(void)
 {
+    vector2 mvt(2.1,2.2);
     GLFWwindow* window;
 
     /* Initialize the library */
