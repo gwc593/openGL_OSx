@@ -5,7 +5,7 @@
 #ifndef OPENGLSANDBOX_VECTOR2_HPP
 #define OPENGLSANDBOX_VECTOR2_HPP
 
-
+#include <math.h>
 class vector2 {
 public:
     float x,y;
@@ -14,6 +14,8 @@ public:
     vector2();
     vector2(float _x, float _y);
     ~vector2();
+
+    static float distace (const vector2& v1, const vector2& v2);
 };
 
 
