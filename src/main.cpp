@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    vector2 mvt(2.1,2.2);
+    vector2<float> mvt(2.1,2.2);
     GLFWwindow* window;
 
     /* Initialize the library */

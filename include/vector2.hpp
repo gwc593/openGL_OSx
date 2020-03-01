@@ -6,17 +6,21 @@
 #define OPENGLSANDBOX_VECTOR2_HPP
 
 #include <math.h>
+
+template <typename T>
 class vector2 {
 public:
-    float x,y;
+    T x,y;
 
     //constructors and destructor
     vector2();
-    vector2(float _x, float _y);
+    vector2(T _x, T _y);
     ~vector2();
 
-    static float distace (const vector2& v1, const vector2& v2);
+    static T distace (const vector2<T>& v1, const vector2<T>& v2);
 };
+
+
 
 
 #endif //OPENGLSANDBOX_VECTOR2_HPP

@@ -3,27 +3,31 @@
 //
 
 #include "vector2.hpp"
-vector2::vector2()
+template <typename T>
+vector2<T>::vector2()
 {
     x = 0;
     y = 0;
 }
 
-vector2::vector2(float _x, float _y)
+template <typename T>
+vector2<T>::vector2(T _x, T _y)
 {
     x = _x;
     y = _y;
 }
 
-vector2::~vector2()
+template <typename T>
+vector2<T>::~vector2()
 {
 
 }
 
 
-float vector2::distace(const vector2 &v1, const vector2 &v2)
+template <typename T>
+T vector2<T>::distace(const vector2<T>& v1, const vector2<T>& v2)
 {
-    float dx,dy;
+    T dx,dy;
 
     dx = abs(v1.x - v2.x);
     dy = abs(v1.y - v2.y);
@@ -31,3 +35,6 @@ float vector2::distace(const vector2 &v1, const vector2 &v2)
     return sqrt((dx*dx)+(dy*dy));
 
 }
+
+template class vector2<float>;
+template class vector2<double>;
