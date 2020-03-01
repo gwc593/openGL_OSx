@@ -13,7 +13,7 @@ find_package(glfw3 REQUIRED)
 
 set(SOURCE_FILES src/main.cpp src/vector2.cpp include/vector2.hpp src/Time.cpp include/Time.hpp)
 
-add_executable(openGLSandBox ${SOURCE_FILES} src/vector2.cpp include/vector2.hpp)
+add_executable(openGLSandBox ${SOURCE_FILES})
 
 target_link_libraries(openGLSandBox glfw)
 

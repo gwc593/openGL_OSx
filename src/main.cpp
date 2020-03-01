@@ -1,6 +1,7 @@
 #include <GLFW/glfw3.h>
 #include "vector2.hpp"
 #include "Time.hpp"
+#include <unistd.h>
 
 int doMain()
 {
@@ -21,7 +22,7 @@ int doMain()
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
-
+    Time::init();
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
@@ -34,6 +35,10 @@ int doMain()
 
         /* Poll for and process events */
         glfwPollEvents();
+
+        //end the frame
+        Time::endFrame();
+        std::cout << 1.0/Time::dT() << std::endl;
     }
 
     glfwTerminate();
