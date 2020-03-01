@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo")
 find_package(glfw3 REQUIRED)
 
-set(SOURCE_FILES src/main.cpp src/vector2.cpp include/vector2.hpp)
+set(SOURCE_FILES src/main.cpp src/vector2.cpp include/vector2.hpp src/Time.cpp include/Time.hpp)
 
 add_executable(openGLSandBox ${SOURCE_FILES} src/vector2.cpp include/vector2.hpp)
 

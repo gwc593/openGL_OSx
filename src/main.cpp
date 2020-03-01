@@ -1,9 +1,9 @@
 #include <GLFW/glfw3.h>
 #include "vector2.hpp"
+#include "Time.hpp"
 
-int main(void)
+int doMain()
 {
-    vector2<float> mvt(2.1,2.2);
     GLFWwindow* window;
 
     /* Initialize the library */
@@ -11,7 +11,7 @@ int main(void)
         return -1;
 
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(640, 480, "Hello World", nullptr, nullptr);
     if (!window)
     {
         glfwTerminate();
@@ -38,4 +38,9 @@ int main(void)
 
     glfwTerminate();
     return 0;
+}
+
+int main()
+{
+    return doMain();
 }
