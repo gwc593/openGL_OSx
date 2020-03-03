@@ -1,7 +1,6 @@
 #include <GLFW/glfw3.h>
 #include "vector2.hpp"
 #include "Time.hpp"
-#include <unistd.h>
 
 int doMain()
 {
